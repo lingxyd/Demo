@@ -13,7 +13,6 @@ namespace PLUploadDemo.Controllers
     {
         #region UI
         
-        // GET: PLDemo
         public ActionResult Index()
         {
             return View();
