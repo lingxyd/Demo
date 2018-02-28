@@ -11,11 +11,15 @@ namespace PLUploadDemo.Controllers
 {
     public class PLDemoController : Controller
     {
+        #region UI
+        
         // GET: PLDemo
         public ActionResult Index()
         {
             return View();
-        }
+        } 
+
+        #endregion
 
 
         #region PLUploader
