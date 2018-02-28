@@ -3,3 +3,8 @@
 ################################################################################
 
 /.vs
+/PlUpload/Demo4.5.2/.vs
+/PlUpload/Demo4.5.2/Demo4.5.2/bin
+/PlUpload/Demo4.5.2/Demo4.5.2/obj/Debug
+/PlUpload/Demo4.5.2/Demo4.5.2/Upload/Common
+/PlUpload/Demo4.5.2/packages

@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/knockout-3.4.2.js"></script>
+<script src="~/Scripts/knockout.mapping-2.4.1.js"></script>
+<script src="~/plupload-2.3.6/js/plupload.full.min.js"></script>
+
+<script src="~/plupload-2.3.6/js/plupload.extension.js?_v_=@(new Random().Next())"></script>
+
+<script src="~/ViewModels/TestInfo.js?_v_=@(new Random().Next())"></script>
+<style type="text/css">
+    .upLoad {
+        display: block;
+        height: 38px;
+        line-height: 38px;
+        background-color: #2073be;
+        border-radius: 4px;
+        margin-left: 15px;
+        border: none;
+        padding: 0px 20px;
+        cursor: pointer;
+    }
+
+    .upLoadTag {
+        display: block;
+        width: 50%;
+        height: 38px;
+        line-height: 38px;
+        margin-left: 15px;
+        border: none;
+        background-color: #fff;
+        max-width: none;
+    }
+
+    .fl {
+        float: left;
+    }
+
+    .tc {
+        text-align: center;
+    }
+
+    .f_white {
+        color: #fff;
+    }
+</style>
+
+<script type="text/javascript">
+
+    var stringVM = {
+
+    };
+    var vm = new TestInfo($(document), stringVM);
+
+    $(function () {
+
+        //debugger;
+        ko.applyBindings(vm, $(".test")[0]);
+    });
+
+</script>
+
+<h2>Plupload Demo Index</h2>
+
+<div class="test">
+
+    <div class="clearfix pr">
+        @*<input type="file" class="upLoad fl tc f_white" value="上传商业计划书" id="file_10" size="30" name="file">*@
+
+        <input type="button" class="upLoad fl tc f_white" value="上传商业计划书" size="30" data-bind="uploader:BusinessPlan">
+        <input type="text" id="txt" name="txt" class="fl upLoadTag f_6" placeholder="文档格式支持 .pdf、.ppt、.pptx、 .doc、.docx" disabled="disabled" />
+        @*<input type="file" id="f" onChange="txt.value=this.value" name="f" style="height:38px;" class="file" size="1" hidefocus="true">*@
+    </div>
+    <div style="padding:10px;">
+        <div id="console"></div>
+        <div id="filelist"></div>
+
+    </div>
+</div>
