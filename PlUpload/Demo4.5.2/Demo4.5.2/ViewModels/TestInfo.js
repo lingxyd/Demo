@@ -94,8 +94,8 @@ function TestInfo(win, vData) {
         singleUpload: true,
         //multi_selection: false,
         autostart: true,
-        //chunk_size: 0,
-        chunk_size: '3mb',
+        chunk_size: 0,
+        //chunk_size: '10mb',
         filters: {
             prevent_duplicates: false,
             max_file_size: '100mb',

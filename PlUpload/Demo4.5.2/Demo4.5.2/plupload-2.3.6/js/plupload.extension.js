@@ -219,8 +219,11 @@
 			UploadComplete: function (up, files) {
 				// Called when all files are either uploaded or failed
 				//log('[UploadComplete]');
-			}
-		}
+            },
+            ChunkUploaded: function (up, file, info) {
+                //debugger
+            }
+        }
 
 	};
 
